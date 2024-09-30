@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/homeCardStudio"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_20sdp"
+    android:backgroundTint="@color/transparent"
+    android:elevation="0dp"
+    android:outlineAmbientShadowColor="@color/transparent"
+    android:outlineSpotShadowColor="@color/transparent"
+    app:cardBackgroundColor="@color/white"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/homeCardStudioLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/homeCardStudioProfilePhoto"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_270sdp"
+        android:backgroundTint="@color/black"
+        android:elevation="0dp"
+        android:outlineSpotShadowColor="@color/transparent"
+        app:cardCornerRadius="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/homeCardStudioProfilePicture"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+            <ImageButton
+                android:id="@+id/home_studio_location_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:backgroundTint="@color/transparent"
+                android:src="@drawable/ic_map"
+                app:layout_constraintEnd_toStartOf="@id/home_studio_heart_button"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageButton
+                android:id="@+id/home_studio_heart_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:backgroundTint="@color/transparent"
+                android:src="@drawable/ic_empty_heart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/homeCardStudioNomeIndirizzo"
+        android:layout_width="@dimen/_210sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homeCardStudioProfilePhoto">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/homeCardStudioNome"
+                android:layout_width="@dimen/_210sdp"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:text="Nome"
+                android:textColor="#000000"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <TextView
+                android:id="@+id/homeCardStudioIndirizzo"
+                android:layout_width="@dimen/_210sdp"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:text="Indirizzo"
+                android:textColor="#000000"
+                android:textSize="@dimen/_9sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/homeCardStudioNome"></TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/homeCardStudioStar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:src="@drawable/star"
+        app:layout_constraintBottom_toBottomOf="@+id/homeCardStudioNomeIndirizzo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/homeCardStudioNomeIndirizzo"
+        app:layout_constraintTop_toTopOf="@id/homeCardStudioNomeIndirizzo" />
+
+    <TextView
+        android:id="@+id/homeCardStudioStars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.5"
+        android:textColor="#000000"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="@id/homeCardStudioStar"
+        app:layout_constraintStart_toEndOf="@id/homeCardStudioStar"
+        app:layout_constraintTop_toTopOf="@id/homeCardStudioStar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

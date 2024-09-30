@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTintMode="src_over"
+    tools:context=".explore.ExploreFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/white"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/exploreHeaderBottomGuideline"
+        app:layout_constraintEnd_toStartOf="@+id/exploreHeaderRightGuideline"
+        app:layout_constraintStart_toStartOf="@id/exploreHeaderLeftGuideline"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/explore_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/explore_title"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_24sdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"></TextView>
+
+            <EditText
+                android:id="@+id/exploreSearchEdit"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_36sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/exploreSearchButton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:hint="@string/explore_search_hint"
+                android:textAlignment="textEnd"
+                android:textSize="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginBottom="0dp"
+                android:visibility="gone"/>
+
+            <ImageButton
+                android:id="@+id/exploreSearchButton"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/white"
+                android:scaleType="fitCenter"
+                android:src="@drawable/search"
+                app:layout_constraintBottom_toBottomOf="@+id/explore_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/explore_title"
+                app:tint="#FF8A2BE2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toTopOf="@id/exploreHeaderBottomGuideline"
+        app:layout_constraintBottom_toBottomOf="@id/exploreMiddleBottomGuideline"
+        app:layout_constraintStart_toStartOf="@id/exploreHeaderLeftGuideline"
+        app:layout_constraintEnd_toEndOf="@id/exploreHeaderRightGuideline"
+        android:scrollbars="none">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scrollLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_6sdp">
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/exploreCenterScrollView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <!--                  colonna sinistra                      -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/exploreCol1Card1"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_190sdp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintStart_toStartOf="@id/scrollLayout"
+                app:layout_constraintTop_toTopOf="@id/scrollLayout"
+                app:layout_constraintRight_toRightOf="@id/exploreCenterScrollView">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/exploreCol1Card1Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/fineline"
+                        app:layout_constraintDimensionRatio="130:190">
+                    </ImageButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/fineline"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"></TextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/exploreCol1Card2"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_270sdp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintStart_toStartOf="@id/scrollLayout"
+                app:layout_constraintTop_toBottomOf="@id/exploreCol1Card1"
+                app:layout_constraintRight_toRightOf="@id/exploreCenterScrollView">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/exploreCol1Card2Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/realistico"></ImageButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/realistic"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"></TextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/exploreCol1Card3"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_190sdp"
+                app:cardCornerRadius="16dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="@id/scrollLayout"
+                app:layout_constraintTop_toBottomOf="@id/exploreCol1Card2"
+                app:layout_constraintRight_toRightOf="@id/exploreCenterScrollView">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/exploreCol1Card3Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/lettering"></ImageButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/lettering"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"></TextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/exploreCol1Card4"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_270sdp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintStart_toStartOf="@id/scrollLayout"
+                app:layout_constraintTop_toBottomOf="@id/exploreCol1Card3"
+                app:layout_constraintRight_toRightOf="@id/exploreCenterScrollView">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/exploreCol1Card4Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/sketch"></ImageButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/sketch"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"></TextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/exploreCol1Card5"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_190sdp"
+                app:cardCornerRadius="16dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="@id/scrollLayout"
+                app:layout_constraintTop_toBottomOf="@id/exploreCol1Card4"
+                app:layout_constraintRight_toRightOf="@id/exploreCenterScrollView">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/exploreCol1Card5Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/blackwork"></ImageButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/blackwork"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"></TextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/exploreCol1Card6"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_270sdp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintStart_toStartOf="@id/scrollLayout"
+                app:layout_constraintTop_toBottomOf="@id/exploreCol1Card5"
+                app:layout_constraintRight_toRightOf="@id/exploreCenterScrollView">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/exploreCol1Card6Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/conceptart"></ImageButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/concept_art"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"></TextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/exploreCol1Card7"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_190sdp"
+                app:cardCornerRadius="16dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="@id/scrollLayout"
+                app:layout_constraintTop_toBottomOf="@id/exploreCol1Card6"
+                app:layout_constraintRight_toRightOf="@id/exploreCenterScrollView">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/exploreCol1Card7Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/illustrative"></ImageButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/illustrative"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"></TextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/exploreCol1Card8"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_270sdp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintStart_toStartOf="@id/scrollLayout"
+                app:layout_constraintRight_toRightOf="@id/exploreCenterScrollView"
+                app:layout_constraintTop_toBottomOf="@id/exploreCol1Card7">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/exploreCol1Card8Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/watercolor"></ImageButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/watercolor"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"></TextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/exploreCol1Card9"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_190sdp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintStart_toStartOf="@id/scrollLayout"
+                app:layout_constraintRight_toRightOf="@id/exploreCenterScrollView"
+                app:layout_constraintTop_toBottomOf="@id/exploreCol1Card8">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/exploreCol1Card9Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/patch"></ImageButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/patch"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"></TextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/exploreCol1Card10"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_270sdp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintStart_toStartOf="@id/scrollLayout"
+                app:layout_constraintRight_toRightOf="@id/exploreCenterScrollView"
+                app:layout_constraintTop_toBottomOf="@id/exploreCol1Card9">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/exploreCol1Card10Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/animals"></ImageButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/animals"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"></TextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--                  colonna destra                      -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/exploreCol2Card1"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_270sdp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="@id/scrollLayout"
+                app:layout_constraintLeft_toLeftOf="@id/exploreCenterScrollView"
+                app:layout_constraintTop_toTopOf="@id/scrollLayout">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/exploreCol2Card1Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/geometrico"></ImageButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/geometric"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"></TextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/exploreCol2Card2"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_190sdp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="@id/scrollLayout"
+                app:layout_constraintLeft_toLeftOf="@id/exploreCenterScrollView"
+                app:layout_constraintTop_toBottomOf="@id/exploreCol2Card1">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/exploreCol2Card2Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cartoon"></ImageButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/cartoon"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"></TextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/exploreCol2Card3"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_270sdp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="@id/scrollLayout"
+                app:layout_constraintLeft_toLeftOf="@id/exploreCenterScrollView"
+                app:layout_constraintTop_toBottomOf="@id/exploreCol2Card2">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/exploreCol2Card3Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/anime"></ImageButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/anime"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"></TextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/exploreCol2Card4"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_190sdp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="@id/scrollLayout"
+                app:layout_constraintLeft_toLeftOf="@id/exploreCenterScrollView"
+                app:layout_constraintTop_toBottomOf="@id/exploreCol2Card3">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/exploreCol2Card4Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/microrealistico"></ImageButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/microrealistic"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"></TextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/exploreCol2Card5"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_270sdp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="@id/scrollLayout"
+                app:layout_constraintLeft_toLeftOf="@id/exploreCenterScrollView"
+                app:layout_constraintTop_toBottomOf="@id/exploreCol2Card4">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/exploreCol2Card5Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ornamentale"></ImageButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/ornamental"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/exploreCol2Card6"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_190sdp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="@id/scrollLayout"
+                app:layout_constraintLeft_toLeftOf="@id/exploreCenterScrollView"
+                app:layout_constraintTop_toBottomOf="@id/exploreCol2Card5">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/exploreCol2Card6Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/colori"></ImageButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/colored"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"></TextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/exploreCol2Card7"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_270sdp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="@id/scrollLayout"
+                app:layout_constraintLeft_toLeftOf="@id/exploreCenterScrollView"
+                app:layout_constraintTop_toBottomOf="@id/exploreCol2Card6">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/exploreCol2Card7Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/fantasy"></ImageButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/fantasy"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"></TextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/exploreCol2Card8"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_190sdp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="@id/scrollLayout"
+                app:layout_constraintLeft_toLeftOf="@id/exploreCenterScrollView"
+                app:layout_constraintTop_toBottomOf="@id/exploreCol2Card7">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/exploreCol2Card8Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/maori"></ImageButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/maori"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"></TextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/exploreCol2Card9"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_270sdp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="@id/scrollLayout"
+                app:layout_constraintLeft_toLeftOf="@id/exploreCenterScrollView"
+                app:layout_constraintTop_toBottomOf="@id/exploreCol2Card8">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/exploreCol2Card9Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/traditional"></ImageButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/traditional"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"></TextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/exploreCol2Card10"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_190sdp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="@id/scrollLayout"
+                app:layout_constraintLeft_toLeftOf="@id/exploreCenterScrollView"
+                app:layout_constraintTop_toBottomOf="@id/exploreCol2Card9">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/exploreCol2Card10Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/mosaico"></ImageButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/mosaic"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"></TextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/exploreHeaderBottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/exploreHeaderLeftGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/exploreHeaderRightGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/exploreMiddleBottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.97" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/half"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "89971050605",
+    "project_id": "inkseeker",
+    "storage_bucket": "inkseeker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89971050605:android:afbee282b5eb803b411764",
+        "android_client_info": {
+          "package_name": "com.onlyapps.inkseeker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "89971050605-8r3cdmgu4t465e0kv29htm52gk4npj7k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.onlyapps.inkseeker",
+            "certificate_hash": "3d0f748ca6c556d7465257adca3a8a1df204cfee"
+          }
+        },
+        {
+          "client_id": "89971050605-qm3s56m8tbghchdc5kp22vc6qitdf1h2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.onlyapps.inkseeker",
+            "certificate_hash": "55dc3cbbb99d785d05413fc77c3fb0bfee4c9711"
+          }
+        },
+        {
+          "client_id": "89971050605-prtkbrjvfgpg47ega6er93otcujbtgg8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKNwQNIvezWMtc-w5ah2AHGFEDP67WVIU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "89971050605-prtkbrjvfgpg47ega6er93otcujbtgg8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
